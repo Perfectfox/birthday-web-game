@@ -138,7 +138,13 @@ export class GameRenderer {
     this.drawStarMap(starField, rhythm, state, songContext);
     const gameplayAlpha = finalReveal?.active ? clamp(1 - finalReveal.progress * 5, 0, 1) : 1;
     this.drawSectionLightCurtain(songContext, gameplayAlpha);
-    this.drawFinalPortraitReveal(portraitImage, contourData, finalReveal);
+    const portraitReveal = endingVideoState?.active
+      ? {
+        ...finalReveal,
+        alphaScale: 1 - smoothstep(endingVideoState.visualFadeProgress ?? 0)
+      }
+      : finalReveal;
+    this.drawFinalPortraitReveal(portraitImage, contourData, portraitReveal);
     const lateConstellationPreview = songContext.active
       ? 0.045 * smoothstep((songContext.endingBoost - 0.28) / 0.72)
       : 0;
@@ -864,7 +870,7 @@ export class GameRenderer {
 
   drawFinalPortraitReveal(image, contourData, finalReveal) {
     if (!image || !this.starMapRect || !finalReveal?.active) return;
-    const alpha = smoothstep(finalReveal.progress) * 0.68;
+    const alpha = smoothstep(finalReveal.progress) * 0.68 * (finalReveal.alphaScale ?? 1);
     if (alpha <= 0.01) return;
 
     const placement = this.getPortraitRevealPlacement(image, contourData);
@@ -924,17 +930,23 @@ export class GameRenderer {
   drawEndingVideo(video, videoState, portraitImage, contourData) {
     if (!video || !videoState?.active) return;
     const alpha = smoothstep(videoState.progress);
+    const fadeOut = smoothstep(videoState.visualFadeProgress ?? 0);
+    const videoAlpha = alpha * (1 - fadeOut);
     if (alpha <= 0.01) return;
     const placement = this.getPortraitRevealPlacement(portraitImage, contourData);
-    if (!placement) return;
+    if (!placement) {
+      this.drawEndingCaptions(videoState);
+      this.drawEndingAudioPrompt(videoState);
+      return;
+    }
     const { drawX, drawY, drawWidth, drawHeight } = placement;
 
     this.ctx.save();
-    this.ctx.globalAlpha = alpha * 0.18;
+    this.ctx.globalAlpha = alpha * lerp(0.18, 0.03, fadeOut);
     this.ctx.fillStyle = "#02040a";
     this.ctx.fillRect(0, 0, this.width, this.height);
 
-    if (video.readyState >= 2 && video.videoWidth && video.videoHeight) {
+    if (videoAlpha > 0.01 && video.readyState >= 2 && video.videoWidth && video.videoHeight) {
       const source = getCoverSourceRect(video.videoWidth, video.videoHeight, drawWidth, drawHeight);
       const buffer = this.getRevealBuffer(Math.ceil(drawWidth), Math.ceil(drawHeight));
       const bufferCtx = buffer.getContext("2d");
@@ -953,16 +965,126 @@ export class GameRenderer {
       bufferCtx.globalCompositeOperation = "destination-in";
       this.applyRevealEdgeFeather(bufferCtx, buffer.width, buffer.height);
       bufferCtx.globalCompositeOperation = "source-over";
-      this.ctx.globalAlpha = alpha;
+      this.ctx.globalAlpha = videoAlpha;
       this.ctx.drawImage(buffer, drawX, drawY, drawWidth, drawHeight);
 
       const gradient = this.ctx.createLinearGradient(0, drawY, 0, drawY + drawHeight);
-      gradient.addColorStop(0, `rgba(2, 4, 10, ${0.18 * alpha})`);
+      gradient.addColorStop(0, `rgba(2, 4, 10, ${0.18 * videoAlpha})`);
       gradient.addColorStop(0.45, "rgba(2, 4, 10, 0)");
-      gradient.addColorStop(1, `rgba(2, 4, 10, ${0.32 * alpha})`);
+      gradient.addColorStop(1, `rgba(2, 4, 10, ${0.32 * videoAlpha})`);
       this.ctx.fillStyle = gradient;
       this.ctx.fillRect(drawX, drawY, drawWidth, drawHeight);
     }
+    this.ctx.restore();
+    this.drawEndingCaptions(videoState);
+    this.drawEndingAudioPrompt(videoState);
+  }
+
+  drawEndingAudioPrompt(videoState) {
+    if (!videoState?.needsGesture) return;
+    const pulse = 0.72 + Math.sin(this.stageClock * 0.004) * 0.18;
+    const width = this.width < 720 ? Math.min(300, this.width - 48) : 330;
+    const height = 44;
+    const x = (this.width - width) / 2;
+    const y = this.height - (this.width < 720 ? 118 : 142);
+    this.ctx.save();
+    this.ctx.globalAlpha = pulse;
+    this.ctx.fillStyle = "rgba(5, 10, 22, 0.66)";
+    this.ctx.strokeStyle = "rgba(248, 212, 119, 0.42)";
+    this.ctx.lineWidth = 1;
+    this.roundRect(x, y, width, height, 999);
+    this.ctx.fill();
+    this.ctx.stroke();
+    this.ctx.shadowColor = "rgba(248, 212, 119, 0.4)";
+    this.ctx.shadowBlur = 18;
+    this.ctx.fillStyle = "rgba(255, 239, 184, 0.96)";
+    this.ctx.textAlign = "center";
+    this.ctx.font = `800 ${this.width < 720 ? 14 : 16}px Microsoft YaHei, sans-serif`;
+    this.ctx.fillText("点击屏幕播放结尾声音", this.width / 2, y + 28);
+    this.ctx.restore();
+  }
+
+  drawEndingCaptions(videoState) {
+    const captions = videoState?.captions ?? [];
+    if (!captions.length) return;
+    const progress = smoothstep(videoState.captionProgress ?? 0);
+    if (progress <= 0.01) return;
+
+    const centerX = this.width / 2;
+    const baseY = this.height < 720 ? this.height * 0.37 : this.height * 0.34;
+    const firstProgress = smoothstep(clamp(progress * 1.28, 0, 1));
+    const secondProgress = smoothstep(clamp((progress - 0.34) / 0.66, 0, 1));
+
+    this.ctx.save();
+    this.ctx.textAlign = "center";
+    this.ctx.globalCompositeOperation = "source-over";
+
+    const veilHeight = this.height < 720 ? 190 : 226;
+    const veil = this.ctx.createRadialGradient(
+      centerX,
+      baseY + 28,
+      12,
+      centerX,
+      baseY + 28,
+      Math.min(this.width, this.height) * 0.48
+    );
+    veil.addColorStop(0, `rgba(2, 4, 10, ${0.32 * progress})`);
+    veil.addColorStop(0.56, `rgba(2, 4, 10, ${0.16 * progress})`);
+    veil.addColorStop(1, "rgba(2, 4, 10, 0)");
+    this.ctx.fillStyle = veil;
+    this.ctx.fillRect(0, baseY - veilHeight / 2, this.width, veilHeight);
+
+    this.drawEndingCaptionLine({
+      text: captions[0],
+      y: baseY,
+      progress: firstProgress,
+      size: this.width < 720 ? 48 : 70,
+      color: "255, 239, 184",
+      shadow: "248, 212, 119"
+    });
+    if (captions[1]) {
+      this.drawEndingCaptionLine({
+        text: captions[1],
+        y: baseY + (this.width < 720 ? 76 : 96),
+        progress: secondProgress,
+        size: this.width < 720 ? 30 : 40,
+        color: "225, 240, 255",
+        shadow: "134, 220, 255"
+      });
+    }
+    this.ctx.restore();
+  }
+
+  drawEndingCaptionLine({ text, y, progress, size, color, shadow }) {
+    if (!text || progress <= 0.01) return;
+    const rise = (1 - progress) * 16;
+    const scale = 0.94 + smoothstep(progress) * 0.06;
+    const shimmer = 0.72 + Math.sin(this.stageClock * 0.0032) * 0.28;
+    this.ctx.save();
+    this.ctx.globalAlpha = progress;
+    this.ctx.translate(this.width / 2, y + rise);
+    this.ctx.scale(scale, scale);
+    this.ctx.shadowColor = `rgba(${shadow}, ${(0.42 + shimmer * 0.16) * progress})`;
+    this.ctx.shadowBlur = (26 + shimmer * 12) * progress;
+    this.ctx.fillStyle = `rgba(${color}, ${0.96 * progress})`;
+    this.ctx.font = `700 ${size}px STKaiti, KaiTi, Songti SC, PingFang SC, Microsoft YaHei, sans-serif`;
+    this.ctx.fillText(text, 0, 0);
+    this.ctx.shadowBlur = 0;
+
+    const lineWidth = Math.min(this.width * 0.58, size * text.length * 0.86) * progress;
+    const lineY = size * 0.5;
+    const gradient = this.ctx.createLinearGradient(-lineWidth / 2, lineY, lineWidth / 2, lineY);
+    gradient.addColorStop(0, "rgba(134, 220, 255, 0)");
+    gradient.addColorStop(0.5, `rgba(${shadow}, ${0.32 * progress})`);
+    gradient.addColorStop(1, "rgba(248, 212, 119, 0)");
+    this.ctx.fillStyle = gradient;
+    this.ctx.fillRect(-lineWidth / 2, lineY, lineWidth, 1);
+
+    this.ctx.globalCompositeOperation = "screen";
+    this.ctx.fillStyle = `rgba(255, 255, 255, ${0.18 * progress * shimmer})`;
+    this.ctx.beginPath();
+    this.ctx.arc(lineWidth * 0.36 * Math.sin(this.stageClock * 0.0018), lineY, Math.max(1.6, size * 0.055), 0, Math.PI * 2);
+    this.ctx.fill();
     this.ctx.restore();
   }
 

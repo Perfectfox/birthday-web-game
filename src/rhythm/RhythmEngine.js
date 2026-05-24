@@ -13,6 +13,12 @@ export class RhythmEngine {
     this.musicStartTime = beatmap.musicStartTime ?? 0;
     this.calibrationOffset = Number(localStorage.getItem("rhythmCalibrationOffset") ?? 0);
     this.timeScale = 1;
+    this.audioEnded = false;
+    this.originalAudio?.addEventListener("ended", () => {
+      if (this.audio === this.originalAudio && this.isPlaying) {
+        this.audioEnded = true;
+      }
+    });
     this.reset();
   }
 
@@ -34,6 +40,7 @@ export class RhythmEngine {
     this.startedAt = 0;
     this.isPlaying = false;
     this.hasEnded = false;
+    this.audioEnded = false;
     this.timeScale = 1;
     this.audio = this.originalAudio;
     if (this.audio) {
@@ -45,6 +52,7 @@ export class RhythmEngine {
   async start() {
     this.startedAt = performance.now();
     this.isPlaying = true;
+    this.audioEnded = false;
     this.timeScale = 1;
     if (this.audio) {
       try {
@@ -64,14 +72,19 @@ export class RhythmEngine {
     this.timeScale = timeScale;
     this.startedAt = performance.now() - startAt / timeScale;
     this.isPlaying = true;
+    this.audioEnded = false;
   }
 
   getTime() {
+    return this.getPlaybackTime() + this.calibrationOffset;
+  }
+
+  getPlaybackTime() {
     if (!this.isPlaying) return 0;
     if (this.audio) {
-      return this.audio.currentTime * 1000 - this.beatmap.offset + this.calibrationOffset;
+      return this.audio.currentTime * 1000 - this.beatmap.offset;
     }
-    return (performance.now() - this.startedAt) * this.timeScale - this.beatmap.offset + this.calibrationOffset;
+    return (performance.now() - this.startedAt) * this.timeScale - this.beatmap.offset;
   }
 
   adjustCalibration(deltaMs) {
@@ -148,6 +161,7 @@ export class RhythmEngine {
   update() {
     if (!this.isPlaying) return;
     const time = this.getTime();
+    const playbackTime = this.getPlaybackTime();
     for (const note of this.notes) {
       if (note.state === "pending" && time - note.time > this.missWindow) {
         note.state = "missed";
@@ -156,7 +170,10 @@ export class RhythmEngine {
     }
 
     const lastNoteTime = this.notes.at(-1)?.time ?? 0;
-    if (time > lastNoteTime + 2200) {
+    if (this.audio?.ended) {
+      this.audioEnded = true;
+    }
+    if (this.audioEnded || playbackTime > lastNoteTime + 2200) {
       this.isPlaying = false;
       if (!this.hasEnded) {
         this.hasEnded = true;

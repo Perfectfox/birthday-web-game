@@ -9,6 +9,9 @@ import { GameState } from "../state/GameState.js";
 const FINAL_REVEAL_DURATION_MS = 4200;
 const ENDING_VIDEO_DELAY_MS = 2600;
 const ENDING_VIDEO_FADE_MS = 1200;
+const ENDING_VIDEO_VISUAL_DURATION_MS = 10020;
+const ENDING_CAPTION_DELAY_MS = 760;
+const ENDING_CAPTION_FADE_MS = 1300;
 const START_CEREMONY_MS = 1550;
 
 export class GameApp {
@@ -51,6 +54,9 @@ export class GameApp {
     this.endingVideoDisabled = false;
     this.endingVideoUnavailableNotified = false;
     this.endingCompleteNotified = false;
+    this.endingVideoNeedsGesture = false;
+    this.endingVideoVisualDurationMs = ENDING_VIDEO_VISUAL_DURATION_MS;
+    this.endingCaptions = ["格格，生日快乐", "愿璀璨星河照亮你的前路"];
   }
 
   async load(manifestUrl) {
@@ -69,6 +75,10 @@ export class GameApp {
     this.portraitImage = portraitImage;
     this.contourData = contourData;
     this.endingVideo = endingVideo;
+    this.endingVideoVisualDurationMs = Number(this.assets.endingVideoVisualDurationMs ?? ENDING_VIDEO_VISUAL_DURATION_MS);
+    this.endingCaptions = Array.isArray(this.assets.endingCaptions) && this.assets.endingCaptions.length
+      ? this.assets.endingCaptions
+      : this.endingCaptions;
     this.endingVideo?.addEventListener("ended", () => {
       this.videoReveal.ended = true;
       this.notifyEndingComplete();
@@ -85,7 +95,7 @@ export class GameApp {
     this.rhythm.onEnd = () => this.startFinalReveal();
 
     window.addEventListener("keydown", (event) => this.handleKeyDown(event));
-    window.addEventListener("pointerdown", () => this.handlePointerDown());
+    window.addEventListener("pointerdown", (event) => this.handlePointerDown(event));
     this.canvas.addEventListener("pointerdown", (event) => this.handleCanvasPointerDown(event));
     window.addEventListener("resize", () => this.renderer.resize());
     this.renderer.resize();
@@ -247,15 +257,19 @@ export class GameApp {
     return true;
   }
 
-  handlePointerDown() {
+  handlePointerDown(event) {
+    if (event.target?.closest?.("button")) return;
+    if (this.videoReveal.ended) return;
     if (!this.videoReveal.active || !this.endingVideo?.paused) return;
     this.endingVideo.muted = this.endingVideoMuted;
-    this.endingVideo.play().catch(() => {
-      this.endingVideo.muted = true;
-      this.endingVideo.play().catch(() => {
-        this.renderer.showSystemMessage("视频播放被浏览器拦截");
+    this.endingVideo.play()
+      .then(() => {
+        this.endingVideoNeedsGesture = false;
+      })
+      .catch(() => {
+        this.endingVideoNeedsGesture = true;
+        this.renderer.showSystemMessage("点击屏幕播放结尾声音");
       });
-    });
   }
 
   handleCanvasPointerDown(event) {
@@ -393,6 +407,7 @@ export class GameApp {
     this.videoReveal.startedAt = time;
     this.videoReveal.ended = false;
     this.endingCompleteNotified = false;
+    this.endingVideoNeedsGesture = false;
     this.endingVideo.muted = this.endingVideoMuted;
     try {
       this.endingVideo.currentTime = 0;
@@ -400,16 +415,14 @@ export class GameApp {
       // Keep the browser's current frame if seeking is temporarily unavailable.
     }
     const playAttempt = this.endingVideo.play();
-    playAttempt?.catch(() => {
-      if (this.endingVideo.muted) {
-        this.renderer.showSystemMessage("点击播放视频");
-        return;
-      }
-      this.endingVideo.muted = true;
-      this.endingVideo.play()
-        .then(() => this.renderer.showSystemMessage("视频已静音播放"))
-        .catch(() => this.renderer.showSystemMessage("点击播放视频"));
-    });
+    playAttempt
+      ?.then(() => {
+        this.endingVideoNeedsGesture = false;
+      })
+      .catch(() => {
+        this.endingVideoNeedsGesture = true;
+        this.renderer.showSystemMessage("点击屏幕播放结尾声音");
+      });
   }
 
   notifyEndingComplete() {
@@ -422,10 +435,30 @@ export class GameApp {
     if (!this.videoReveal.active) {
       return { active: false, progress: 0, ended: false };
     }
+    const elapsed = time - this.videoReveal.startedAt;
+    const videoTimeMs = Number.isFinite(this.endingVideo?.currentTime)
+      ? this.endingVideo.currentTime * 1000
+      : elapsed;
+    const visualFadeProgress = clamp(
+      (videoTimeMs - this.endingVideoVisualDurationMs) / ENDING_VIDEO_FADE_MS,
+      0,
+      1
+    );
+    const captionProgress = clamp(
+      (videoTimeMs - this.endingVideoVisualDurationMs - ENDING_CAPTION_DELAY_MS) / ENDING_CAPTION_FADE_MS,
+      0,
+      1
+    );
     return {
       active: true,
-      progress: Math.min(1, (time - this.videoReveal.startedAt) / ENDING_VIDEO_FADE_MS),
-      ended: this.videoReveal.ended
+      progress: Math.min(1, elapsed / ENDING_VIDEO_FADE_MS),
+      ended: this.videoReveal.ended,
+      videoTimeMs,
+      visualDurationMs: this.endingVideoVisualDurationMs,
+      visualFadeProgress,
+      captionProgress,
+      captions: this.endingCaptions,
+      needsGesture: this.endingVideoNeedsGesture
     };
   }
 }

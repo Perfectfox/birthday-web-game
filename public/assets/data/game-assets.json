@@ -4,6 +4,11 @@
   "portraitImage": "public/assets/images/birthday-couple-cake-source.png",
   "portraitContour": "public/assets/data/birthday-couple-cake-dense-contour-aligned.json",
   "endingVideo": "public/assets/videos/birthday.mp4",
+  "endingVideoVisualDurationMs": 10020,
+  "endingCaptions": [
+    "格格，生日快乐",
+    "愿璀璨星河照亮你的前路"
+  ],
   "beatmap": "public/assets/data/beatmap-ai-hen-jiandan.json",
   "audio": "public/assets/audio/ai-hen-jiandan.mp3"
 }

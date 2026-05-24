@@ -7,6 +7,7 @@ const resultCard = document.querySelector("#result-card");
 const startButton = document.querySelector("#start-button");
 const homeButton = document.querySelector("#home-button");
 const revealPreviewButton = document.querySelector("#reveal-preview-button");
+const resultToggleButton = document.querySelector("#result-toggle-button");
 const restartButton = document.querySelector("#restart-button");
 const endingAgainButton = document.querySelector("#ending-again-button");
 const resultKicker = document.querySelector("#result-kicker");
@@ -57,9 +58,10 @@ const INTRO_SLIDES = [
     markerGroup: "anchor"
   },
   {
-    line: "向南望去，南十字和半人马座守在夜色里。",
+    line: "南十字与半人马守在夜色里。",
     support: "南门二、哈达尔和南十字座像几枚路标，替这张星图标出真实的方向。",
-    markerGroup: "south"
+    markerGroup: "south",
+    singleLine: true
   },
   {
     line: "等旋律响起，节拍会变成飞向星图的光。",
@@ -132,11 +134,28 @@ function hideHomeButton() {
 
 function hideEndControls() {
   endControls.classList.add("is-hidden");
+  resultCard?.classList.add("is-hidden");
+  resultToggleButton?.classList.remove("is-hidden");
+  updateResultToggleButton();
 }
 
 function showEndControls(summary = app.getResultSummary(), options = {}) {
   updateResultCard(summary, options);
+  resultCard?.classList.toggle("is-hidden", !options.showResult);
+  resultToggleButton?.classList.toggle("is-hidden", Boolean(options.hideResultToggle));
+  updateResultToggleButton();
   endControls.classList.remove("is-hidden");
+}
+
+function toggleResultCard() {
+  resultCard?.classList.toggle("is-hidden");
+  updateResultToggleButton();
+}
+
+function updateResultToggleButton() {
+  if (!resultToggleButton || !resultCard) return;
+  const visible = !resultCard.classList.contains("is-hidden");
+  resultToggleButton.textContent = visible ? "收起音游结果" : "查看音游结果";
 }
 
 function updateResultCard(summary, options = {}) {
@@ -196,6 +215,7 @@ function resetIntroSequence() {
   introGate?.classList.remove("is-hidden", "is-leaving");
   introCopy?.classList.add("is-hidden");
   introCopy?.classList.remove("is-changing");
+  introLine?.classList.remove("is-single-line");
   introLine?.replaceChildren();
   introSupport?.replaceChildren();
   introControls?.classList.add("is-hidden");
@@ -258,6 +278,7 @@ function advanceIntroSlide() {
 
 function renderIntroSlide() {
   const slide = INTRO_SLIDES[introIndex] ?? INTRO_SLIDES.at(-1);
+  introLine?.classList.toggle("is-single-line", Boolean(slide.singleLine));
   setAnimatedText(introLine, slide.line, { stepMs: 34 });
   setAnimatedText(introSupport, slide.support, { stepMs: 18, startDelayMs: 220 });
   const finalSlide = Boolean(slide.final);
@@ -647,6 +668,10 @@ endingAgainButton.addEventListener("click", () => {
   app.previewFinalReveal();
 });
 
+resultToggleButton?.addEventListener("click", () => {
+  toggleResultCard();
+});
+
 calibrationButton.addEventListener("click", () => {
   openCalibrationPanel();
 });
@@ -691,7 +716,9 @@ overlay.addEventListener("pointerdown", (event) => {
 });
 
 app.onEndingComplete = (summary) => {
-  showEndControls(summary);
+  showEndControls(summary, {
+    hideResultToggle: String(summary?.rank ?? "").toLowerCase() === "preview"
+  });
 };
 
 window.addEventListener("keydown", (event) => {
@@ -759,7 +786,7 @@ if (searchParams.has("previewResults")) {
   overlay.classList.add("is-hidden");
   showHomeButton();
   app.previewFinalReveal({
-    mutedEndingVideo: true,
+    mutedEndingVideo: false,
     skipToVideo: searchParams.has("previewVideo")
   });
 } else if (searchParams.has("demo")) {

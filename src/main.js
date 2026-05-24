@@ -18,6 +18,8 @@ const resultAccuracy = document.querySelector("#result-accuracy");
 const resultCompletion = document.querySelector("#result-completion");
 const resultHitMiss = document.querySelector("#result-hit-miss");
 const currentOffset = document.querySelector("#current-offset");
+const introGate = document.querySelector("#intro-gate");
+const introGateButton = document.querySelector("#intro-gate-button");
 const introCopy = document.querySelector("#intro-copy");
 const introLine = document.querySelector("#intro-line");
 const introSupport = document.querySelector("#intro-support");
@@ -86,6 +88,8 @@ const calibration = {
 let introIndex = 0;
 let introTimer = null;
 let introTransitionTimer = null;
+let introGateTimer = null;
+let introStarted = false;
 let introChanging = false;
 let lastIntroAdvanceAt = 0;
 
@@ -186,30 +190,57 @@ function updateOffsetReadout(options = {}) {
 function resetIntroSequence() {
   stopIntroSequence();
   introIndex = 0;
+  introStarted = false;
   introChanging = false;
   lastIntroAdvanceAt = 0;
+  introGate?.classList.remove("is-hidden", "is-leaving");
+  introCopy?.classList.add("is-hidden");
   introCopy?.classList.remove("is-changing");
-  renderIntroSlide();
-  scheduleIntroAdvance();
+  introLine?.replaceChildren();
+  introSupport?.replaceChildren();
+  introControls?.classList.add("is-hidden");
+  advanceHint?.classList.add("is-hidden");
+  app.setIntroScene({
+    active: !overlay.classList.contains("is-hidden"),
+    step: -1,
+    markerGroup: "gate",
+    final: false
+  });
 }
 
 function stopIntroSequence() {
   window.clearTimeout(introTimer);
   window.clearTimeout(introTransitionTimer);
+  window.clearTimeout(introGateTimer);
   introTimer = null;
   introTransitionTimer = null;
+  introGateTimer = null;
 }
 
 function scheduleIntroAdvance() {
   stopIntroSequence();
-  if (isIntroComplete()) return;
+  if (!introStarted || isIntroComplete()) return;
   introTimer = window.setTimeout(() => {
     advanceIntroSlide();
   }, INTRO_AUTO_ADVANCE_MS);
 }
 
+function beginIntroSequence() {
+  if (introStarted || overlay.classList.contains("is-hidden")) return;
+  introStarted = true;
+  introGate?.classList.add("is-leaving");
+  stopIntroSequence();
+  introGateTimer = window.setTimeout(() => {
+    introGate?.classList.add("is-hidden");
+    introGate?.classList.remove("is-leaving");
+    introCopy?.classList.remove("is-hidden");
+    renderIntroSlide();
+    scheduleIntroAdvance();
+  }, 420);
+}
+
 function advanceIntroSlide() {
-  if (introChanging || isIntroComplete() || overlay.classList.contains("is-hidden")) return;
+  if (!introStarted || introChanging || isIntroComplete() || overlay.classList.contains("is-hidden")) return;
   const now = performance.now();
   if (now - lastIntroAdvanceAt < INTRO_ADVANCE_COOLDOWN_MS) return;
   lastIntroAdvanceAt = now;
@@ -259,7 +290,7 @@ function setAnimatedText(element, text, options = {}) {
 }
 
 function isIntroComplete() {
-  return Boolean(INTRO_SLIDES[introIndex]?.final);
+  return introStarted && Boolean(INTRO_SLIDES[introIndex]?.final);
 }
 
 function resetCalibrationVisualizer() {
@@ -586,6 +617,10 @@ startButton.addEventListener("click", async () => {
   });
 });
 
+introGateButton?.addEventListener("click", () => {
+  beginIntroSequence();
+});
+
 revealPreviewButton?.addEventListener("click", () => {
   dismissOverlay();
   app.previewFinalReveal();
@@ -649,6 +684,7 @@ calibrationPanel.addEventListener("pointerdown", (event) => {
 overlay.addEventListener("pointerdown", (event) => {
   if (event.button !== 0 || event.target.closest("button")) return;
   if (!calibrationPanel.classList.contains("is-hidden")) return;
+  if (!introStarted) return;
   if (isIntroComplete()) return;
   event.preventDefault();
   advanceIntroSlide();
@@ -685,7 +721,7 @@ window.addEventListener("keydown", (event) => {
 }, { capture: true });
 
 window.addEventListener("keydown", (event) => {
-  if (event.code === "Space" && !event.repeat && !overlay.classList.contains("is-hidden") && calibrationPanel.classList.contains("is-hidden") && !isIntroComplete()) {
+  if (event.code === "Space" && !event.repeat && introStarted && !overlay.classList.contains("is-hidden") && calibrationPanel.classList.contains("is-hidden") && !isIntroComplete()) {
     event.preventDefault();
     advanceIntroSlide();
     return;

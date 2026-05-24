@@ -12,11 +12,23 @@
       <button id="home-button" class="home-button is-hidden" type="button">回到开始</button>
       <section id="overlay" class="overlay">
         <div class="intro" aria-live="polite">
-          <div id="intro-copy" class="intro-copy">
+          <div id="intro-gate" class="intro-gate">
+            <p class="process-kicker">星图进程待启动</p>
+            <button id="intro-gate-button" class="process-switch" type="button">
+              <span class="process-switch-track" aria-hidden="true">
+                <span class="process-switch-core"></span>
+              </span>
+              <span class="process-switch-copy">
+                <span>开启星图进程</span>
+                <small>载入此刻的墨尔本天球</small>
+              </span>
+            </button>
+          </div>
+          <div id="intro-copy" class="intro-copy is-hidden">
             <p class="intro-line" id="intro-line"></p>
             <p class="intro-support" id="intro-support"></p>
           </div>
-          <p class="advance-hint" id="advance-hint">按空格或点击继续</p>
+          <p class="advance-hint is-hidden" id="advance-hint">按空格或点击继续</p>
           <div id="intro-controls" class="intro-controls is-hidden">
             <div class="operation-guide">
               <p>D / F / J / K 分别对应四条轨道，星光压到判定线附近时按下。</p>

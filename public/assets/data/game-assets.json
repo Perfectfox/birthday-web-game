@@ -1,0 +1,9 @@
+{
+  "starMapImage": "public/assets/images/star-map-melbourne-2026-05-24-2000.png",
+  "starMapData": "public/assets/data/star-map-melbourne-2026-05-24-2000.json",
+  "portraitImage": "public/assets/images/birthday-couple-cake-source.png",
+  "portraitContour": "public/assets/data/birthday-couple-cake-dense-contour-aligned.json",
+  "endingVideo": "public/assets/videos/birthday.mp4",
+  "beatmap": "public/assets/data/beatmap-ai-hen-jiandan.json",
+  "audio": "public/assets/audio/ai-hen-jiandan.mp3"
+}

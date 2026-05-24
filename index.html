@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生日星图音游</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" width="1920" height="1080" aria-label="生日星图音游"></canvas>
+      <button id="home-button" class="home-button is-hidden" type="button">回到开始</button>
+      <section id="overlay" class="overlay">
+        <div class="intro" aria-live="polite">
+          <div id="intro-copy" class="intro-copy">
+            <p class="intro-line" id="intro-line"></p>
+            <p class="intro-support" id="intro-support"></p>
+          </div>
+          <p class="advance-hint" id="advance-hint">按空格或点击继续</p>
+          <div id="intro-controls" class="intro-controls is-hidden">
+            <div class="operation-guide">
+              <p>D / F / J / K 分别对应四条轨道，星光压到判定线附近时按下。</p>
+              <div class="key-row" aria-label="操作按键">
+                <span>D</span>
+                <span>F</span>
+                <span>J</span>
+                <span>K</span>
+              </div>
+              <p class="offset-readout" id="current-offset">延迟 0ms</p>
+            </div>
+            <div class="actions">
+              <button id="start-button" class="primary" type="button">开始游戏</button>
+              <button id="calibration-button" class="secondary" type="button">校准节拍</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="calibration-panel" class="calibration-panel is-hidden" aria-label="延迟校准">
+        <div class="calibration-card">
+          <div class="calibration-pulse" id="calibration-pulse" aria-hidden="true"></div>
+          <p class="calibration-label" id="calibration-label">延迟校准</p>
+          <div class="calibration-meter" aria-label="节拍和按键对齐视图">
+            <div class="calibration-meter-labels" aria-hidden="true">
+              <span>提前</span>
+              <span>节拍</span>
+              <span>滞后</span>
+            </div>
+            <div class="calibration-track" id="calibration-track">
+              <div class="calibration-center-line" aria-hidden="true"></div>
+              <div class="calibration-beat-dot" id="calibration-beat-dot" aria-hidden="true"></div>
+              <div class="calibration-hit-layer" id="calibration-hit-layer" aria-hidden="true"></div>
+            </div>
+            <p class="calibration-delta" id="calibration-delta">等待第一次节拍</p>
+            <div class="calibration-samples" id="calibration-samples" aria-label="已记录样本"></div>
+          </div>
+          <p class="calibration-direction" id="calibration-direction">中线是节拍；按键落在左边是提前，右边是滞后。</p>
+          <p class="calibration-result" id="calibration-result">当前延迟：0ms。点“开始测量”后，光环亮起或听到提示音时按 D/F/J/K/空格。</p>
+          <p class="calibration-help">它只用来补偿设备和手感的整体提前/滞后，不影响谱面难度。测完后直接应用推荐值即可。</p>
+          <div class="calibration-actions">
+            <button id="calibration-start-button" type="button">开始测量</button>
+            <button id="calibration-apply-button" type="button" disabled>应用推荐值</button>
+            <button id="calibration-close-button" type="button">关闭</button>
+          </div>
+          <div class="calibration-manual" aria-label="手动微调延迟">
+            <button id="calibration-late-button" type="button">总是过晚 -25ms</button>
+            <button id="calibration-early-button" type="button">总是过早 +25ms</button>
+            <button id="calibration-reset-button" type="button">重置</button>
+          </div>
+        </div>
+      </section>
+      <section id="end-controls" class="end-controls is-hidden" aria-label="结尾控制">
+        <div class="result-card" id="result-card" aria-live="polite">
+          <p class="result-kicker" id="result-kicker">星座已完成</p>
+          <div class="result-rank" id="result-rank">--</div>
+          <div class="result-grid">
+            <span>得分</span>
+            <strong id="result-score">000000</strong>
+            <span>最佳</span>
+            <strong id="result-best">000000</strong>
+            <span>最大连击</span>
+            <strong id="result-combo">0</strong>
+            <span>准度</span>
+            <strong id="result-accuracy">100%</strong>
+            <span>完成度</span>
+            <strong id="result-completion">0%</strong>
+            <span>命中 / 漏击</span>
+            <strong id="result-hit-miss">0 / 0</strong>
+          </div>
+        </div>
+        <div class="end-actions">
+          <button id="restart-button" type="button">&#37325;&#26032;&#24320;&#22987;</button>
+          <button id="ending-again-button" type="button">&#20877;&#30475;&#32467;&#23614;</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

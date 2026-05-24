@@ -1,0 +1,3455 @@
+{
+  "title": "\u7231\u5f88\u7b80\u5355",
+  "artist": "\u9676\u5586",
+  "audio": "public/assets/audio/ai-hen-jiandan.mp3",
+  "offset": 0,
+  "approachTime": 1550,
+  "musicStartTime": 5150,
+  "openingApproachTime": 1550,
+  "openingLeadIn": 720,
+  "lanes": [
+    "D",
+    "F",
+    "J",
+    "K"
+  ],
+  "analysis": {
+    "durationSeconds": 269.533,
+    "estimatedBpm": 136.0,
+    "sampleRate": 22050,
+    "noteCount": 464,
+    "generator": "tools/generate_beatmap.py",
+    "style": "medium 4-lane falling rhythm chart"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "label": "开场星空",
+      "start": 0,
+      "end": 30000,
+      "energy": 0.38,
+      "mood": "quiet"
+    },
+    {
+      "id": "verse-1",
+      "label": "第一段主歌",
+      "start": 30000,
+      "end": 78000,
+      "energy": 0.52,
+      "mood": "warm"
+    },
+    {
+      "id": "pre-chorus-1",
+      "label": "情绪上升",
+      "start": 78000,
+      "end": 107000,
+      "energy": 0.66,
+      "mood": "rise"
+    },
+    {
+      "id": "chorus-1",
+      "label": "副歌",
+      "start": 107000,
+      "end": 154000,
+      "energy": 0.86,
+      "mood": "chorus"
+    },
+    {
+      "id": "verse-2",
+      "label": "第二段主歌",
+      "start": 154000,
+      "end": 190000,
+      "energy": 0.58,
+      "mood": "warm"
+    },
+    {
+      "id": "bridge",
+      "label": "桥段",
+      "start": 190000,
+      "end": 219000,
+      "energy": 0.72,
+      "mood": "suspend"
+    },
+    {
+      "id": "final-chorus",
+      "label": "最终副歌",
+      "start": 219000,
+      "end": 253000,
+      "energy": 1,
+      "mood": "finale"
+    },
+    {
+      "id": "outro",
+      "label": "星光尾声",
+      "start": 253000,
+      "end": 270000,
+      "energy": 0.74,
+      "mood": "resolve"
+    }
+  ],
+  "notes": [
+    {
+      "id": "n0001",
+      "time": 2601,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0002",
+      "time": 3042,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0003",
+      "time": 3785,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.02
+    },
+    {
+      "id": "n0004",
+      "time": 4342,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0005",
+      "time": 4783,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.64,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0006",
+      "time": 5224,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0007",
+      "time": 6084,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0008",
+      "time": 6525,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0009",
+      "time": 7384,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.64,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0010",
+      "time": 7825,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0011",
+      "time": 8266,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.684
+    },
+    {
+      "id": "n0012",
+      "time": 9125,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0013",
+      "time": 9567,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0014",
+      "time": 10426,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.023
+    },
+    {
+      "id": "n0015",
+      "time": 10867,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0016",
+      "time": 11308,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0017",
+      "time": 11749,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.89,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0018",
+      "time": 12190,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0019",
+      "time": 12632,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0020",
+      "time": 13514,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.67
+    },
+    {
+      "id": "n0021",
+      "time": 14153,
+      "lane": 0,
+      "source": "onset",
+      "strength": 0.918
+    },
+    {
+      "id": "n0022",
+      "time": 14814,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0023",
+      "time": 15673,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0024",
+      "time": 16115,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0025",
+      "time": 16951,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.64,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0026",
+      "time": 17392,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0027",
+      "time": 18274,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0028",
+      "time": 18715,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0029",
+      "time": 19156,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0030",
+      "time": 20016,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0031",
+      "time": 20875,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0032",
+      "time": 21757,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0033",
+      "time": 22616,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0034",
+      "time": 23057,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0035",
+      "time": 23917,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0036",
+      "time": 24776,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.643
+    },
+    {
+      "id": "n0037",
+      "time": 25217,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0038",
+      "time": 26099,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0039",
+      "time": 26982,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0040",
+      "time": 27818,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0041",
+      "time": 28700,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0042",
+      "time": 29118,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.646
+    },
+    {
+      "id": "n0043",
+      "time": 29559,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0044",
+      "time": 30441,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0045",
+      "time": 31300,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0046",
+      "time": 32183,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0047",
+      "time": 33065,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0048",
+      "time": 33924,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.019
+    },
+    {
+      "id": "n0049",
+      "time": 34760,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0050",
+      "time": 35225,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.694
+    },
+    {
+      "id": "n0051",
+      "time": 35666,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0052",
+      "time": 36548,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0053",
+      "time": 37407,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.003
+    },
+    {
+      "id": "n0054",
+      "time": 38266,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0055",
+      "time": 39126,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.02
+    },
+    {
+      "id": "n0056",
+      "time": 39590,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.753
+    },
+    {
+      "id": "n0057",
+      "time": 40031,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0058",
+      "time": 40890,
+      "lane": 2,
+      "source": "onset",
+      "strength": 0.972
+    },
+    {
+      "id": "n0059",
+      "time": 41749,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0060",
+      "time": 42632,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0061",
+      "time": 43514,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0062",
+      "time": 44373,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0063",
+      "time": 45232,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0064",
+      "time": 46092,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0065",
+      "time": 46974,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0066",
+      "time": 47856,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0067",
+      "time": 48715,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0068",
+      "time": 49575,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0069",
+      "time": 50434,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0070",
+      "time": 51316,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0071",
+      "time": 51734,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.649
+    },
+    {
+      "id": "n0072",
+      "time": 52198,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0073",
+      "time": 53034,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.857,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0074",
+      "time": 53476,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.71
+    },
+    {
+      "id": "n0075",
+      "time": 53940,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0076",
+      "time": 54799,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0077",
+      "time": 55681,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0078",
+      "time": 56123,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.7
+    },
+    {
+      "id": "n0079",
+      "time": 56541,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0080",
+      "time": 57423,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0081",
+      "time": 58259,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0082",
+      "time": 58677,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.663
+    },
+    {
+      "id": "n0083",
+      "time": 59141,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0084",
+      "time": 60000,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0085",
+      "time": 60442,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.643,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0086",
+      "time": 60883,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0087",
+      "time": 61765,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0088",
+      "time": 62183,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.661
+    },
+    {
+      "id": "n0089",
+      "time": 62624,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0090",
+      "time": 63065,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.704
+    },
+    {
+      "id": "n0091",
+      "time": 63483,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0092",
+      "time": 64366,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0093",
+      "time": 65225,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.847,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0094",
+      "time": 66107,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0095",
+      "time": 66966,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.869
+    },
+    {
+      "id": "n0096",
+      "time": 67431,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.804
+    },
+    {
+      "id": "n0097",
+      "time": 67849,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0098",
+      "time": 68708,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.869
+    },
+    {
+      "id": "n0099",
+      "time": 69567,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0100",
+      "time": 70449,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.836
+    },
+    {
+      "id": "n0101",
+      "time": 71332,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0102",
+      "time": 72168,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.016
+    },
+    {
+      "id": "n0103",
+      "time": 72609,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.757
+    },
+    {
+      "id": "n0104",
+      "time": 73050,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0105",
+      "time": 73491,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.73,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0106",
+      "time": 73909,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0107",
+      "time": 74374,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.688
+    },
+    {
+      "id": "n0108",
+      "time": 74791,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0109",
+      "time": 75233,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.714,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0110",
+      "time": 75651,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0111",
+      "time": 76533,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0112",
+      "time": 76974,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.681
+    },
+    {
+      "id": "n0113",
+      "time": 77415,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0114",
+      "time": 78274,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0115",
+      "time": 78274,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0116",
+      "time": 79134,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.993
+    },
+    {
+      "id": "n0117",
+      "time": 79575,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.725
+    },
+    {
+      "id": "n0118",
+      "time": 80016,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0119",
+      "time": 80875,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.032
+    },
+    {
+      "id": "n0120",
+      "time": 80875,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.032,
+      "accent": "double"
+    },
+    {
+      "id": "n0121",
+      "time": 81757,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0122",
+      "time": 82617,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.876
+    },
+    {
+      "id": "n0123",
+      "time": 83476,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0124",
+      "time": 84358,
+      "lane": 2,
+      "source": "onset",
+      "strength": 0.956
+    },
+    {
+      "id": "n0125",
+      "time": 85240,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0126",
+      "time": 85240,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0127",
+      "time": 85682,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.657
+    },
+    {
+      "id": "n0128",
+      "time": 86100,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.881,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0129",
+      "time": 86541,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.746
+    },
+    {
+      "id": "n0130",
+      "time": 86959,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0131",
+      "time": 86959,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0132",
+      "time": 87400,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.641
+    },
+    {
+      "id": "n0133",
+      "time": 87818,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.985
+    },
+    {
+      "id": "n0134",
+      "time": 88700,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0135",
+      "time": 89141,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.666
+    },
+    {
+      "id": "n0136",
+      "time": 89583,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.843
+    },
+    {
+      "id": "n0137",
+      "time": 90024,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.714,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0138",
+      "time": 90442,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0139",
+      "time": 91324,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0140",
+      "time": 92206,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0141",
+      "time": 92206,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0142",
+      "time": 93042,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.049
+    },
+    {
+      "id": "n0143",
+      "time": 93484,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.713
+    },
+    {
+      "id": "n0144",
+      "time": 93925,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0145",
+      "time": 94343,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.886
+    },
+    {
+      "id": "n0146",
+      "time": 94784,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.021
+    },
+    {
+      "id": "n0147",
+      "time": 94784,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.021,
+      "accent": "double"
+    },
+    {
+      "id": "n0148",
+      "time": 95225,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.832
+    },
+    {
+      "id": "n0149",
+      "time": 95666,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0150",
+      "time": 96084,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.693
+    },
+    {
+      "id": "n0151",
+      "time": 96525,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0152",
+      "time": 96525,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.1,
+      "accent": "double"
+    },
+    {
+      "id": "n0153",
+      "time": 96943,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.776
+    },
+    {
+      "id": "n0154",
+      "time": 97361,
+      "lane": 2,
+      "source": "onset",
+      "strength": 1.01
+    },
+    {
+      "id": "n0155",
+      "time": 98267,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.833
+    },
+    {
+      "id": "n0156",
+      "time": 99149,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0157",
+      "time": 100008,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0158",
+      "time": 100008,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.1,
+      "accent": "double"
+    },
+    {
+      "id": "n0159",
+      "time": 100426,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.715
+    },
+    {
+      "id": "n0160",
+      "time": 100891,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0161",
+      "time": 101309,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.668,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0162",
+      "time": 101750,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.848
+    },
+    {
+      "id": "n0163",
+      "time": 102609,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0164",
+      "time": 103491,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0165",
+      "time": 103909,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.672,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0166",
+      "time": 104350,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0167",
+      "time": 104792,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.694
+    },
+    {
+      "id": "n0168",
+      "time": 105233,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.865
+    },
+    {
+      "id": "n0169",
+      "time": 106092,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0170",
+      "time": 106533,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.644
+    },
+    {
+      "id": "n0171",
+      "time": 106951,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.02,
+      "accent": "double"
+    },
+    {
+      "id": "n0172",
+      "time": 106951,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.02
+    },
+    {
+      "id": "n0173",
+      "time": 107392,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.816
+    },
+    {
+      "id": "n0174",
+      "time": 107833,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0175",
+      "time": 108251,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.882
+    },
+    {
+      "id": "n0176",
+      "time": 108693,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.062
+    },
+    {
+      "id": "n0177",
+      "time": 109575,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0178",
+      "time": 109575,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0179",
+      "time": 110434,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.098
+    },
+    {
+      "id": "n0180",
+      "time": 110875,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.717
+    },
+    {
+      "id": "n0181",
+      "time": 111316,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0182",
+      "time": 111758,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.765
+    },
+    {
+      "id": "n0183",
+      "time": 112176,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.878,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0184",
+      "time": 112617,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.765
+    },
+    {
+      "id": "n0185",
+      "time": 113058,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0186",
+      "time": 113917,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0187",
+      "time": 114358,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 0.67,
+      "accent": "double"
+    },
+    {
+      "id": "n0188",
+      "time": 114358,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.67,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0189",
+      "time": 114776,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0190",
+      "time": 115194,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.792
+    },
+    {
+      "id": "n0191",
+      "time": 115659,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.874
+    },
+    {
+      "id": "n0192",
+      "time": 116123,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.646,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0193",
+      "time": 116123,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 0.646,
+      "accent": "double"
+    },
+    {
+      "id": "n0194",
+      "time": 116541,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0195",
+      "time": 117400,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.083
+    },
+    {
+      "id": "n0196",
+      "time": 118259,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0197",
+      "time": 119142,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0198",
+      "time": 120024,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0199",
+      "time": 120024,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0200",
+      "time": 120883,
+      "lane": 1,
+      "source": "onset",
+      "strength": 0.948
+    },
+    {
+      "id": "n0201",
+      "time": 121324,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.751
+    },
+    {
+      "id": "n0202",
+      "time": 121765,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0203",
+      "time": 122183,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.689
+    },
+    {
+      "id": "n0204",
+      "time": 122625,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.925
+    },
+    {
+      "id": "n0205",
+      "time": 123043,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.731
+    },
+    {
+      "id": "n0206",
+      "time": 123484,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.048
+    },
+    {
+      "id": "n0207",
+      "time": 123925,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.642
+    },
+    {
+      "id": "n0208",
+      "time": 124366,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0209",
+      "time": 124784,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.71
+    },
+    {
+      "id": "n0210",
+      "time": 125225,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0211",
+      "time": 126084,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0212",
+      "time": 126526,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.646
+    },
+    {
+      "id": "n0213",
+      "time": 126967,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0214",
+      "time": 127849,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0215",
+      "time": 128267,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.678
+    },
+    {
+      "id": "n0216",
+      "time": 128708,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0217",
+      "time": 129149,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.644
+    },
+    {
+      "id": "n0218",
+      "time": 129567,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.845,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0219",
+      "time": 130009,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.641
+    },
+    {
+      "id": "n0220",
+      "time": 130450,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0221",
+      "time": 130868,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.645
+    },
+    {
+      "id": "n0222",
+      "time": 131309,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0223",
+      "time": 132191,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0224",
+      "time": 133050,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0225",
+      "time": 133492,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.645
+    },
+    {
+      "id": "n0226",
+      "time": 133909,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0227",
+      "time": 133909,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0228",
+      "time": 134792,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0229",
+      "time": 135210,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.687
+    },
+    {
+      "id": "n0230",
+      "time": 135674,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0231",
+      "time": 136533,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0232",
+      "time": 136533,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 0.82,
+      "accent": "double"
+    },
+    {
+      "id": "n0233",
+      "time": 137416,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0234",
+      "time": 138275,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.872
+    },
+    {
+      "id": "n0235",
+      "time": 138693,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.662
+    },
+    {
+      "id": "n0236",
+      "time": 139134,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0237",
+      "time": 139575,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.706
+    },
+    {
+      "id": "n0238",
+      "time": 140016,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0239",
+      "time": 140875,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0240",
+      "time": 141758,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0241",
+      "time": 142176,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.651
+    },
+    {
+      "id": "n0242",
+      "time": 142617,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0243",
+      "time": 143058,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.666
+    },
+    {
+      "id": "n0244",
+      "time": 143499,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0245",
+      "time": 143917,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.692
+    },
+    {
+      "id": "n0246",
+      "time": 144358,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0247",
+      "time": 144358,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0248",
+      "time": 145241,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0249",
+      "time": 145659,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.742,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0250",
+      "time": 146100,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0251",
+      "time": 146541,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.664
+    },
+    {
+      "id": "n0252",
+      "time": 146982,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0253",
+      "time": 147865,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0254",
+      "time": 148701,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0255",
+      "time": 149142,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.65
+    },
+    {
+      "id": "n0256",
+      "time": 149583,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0257",
+      "time": 150001,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.71,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0258",
+      "time": 150442,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0259",
+      "time": 150883,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.687
+    },
+    {
+      "id": "n0260",
+      "time": 151324,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.031
+    },
+    {
+      "id": "n0261",
+      "time": 152184,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0262",
+      "time": 153066,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0263",
+      "time": 153925,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.83
+    },
+    {
+      "id": "n0264",
+      "time": 154807,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0265",
+      "time": 155225,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.641,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0266",
+      "time": 155667,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.86
+    },
+    {
+      "id": "n0267",
+      "time": 156085,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.754
+    },
+    {
+      "id": "n0268",
+      "time": 156526,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0269",
+      "time": 156967,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.692,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0270",
+      "time": 157408,
+      "lane": 2,
+      "source": "onset",
+      "strength": 0.933
+    },
+    {
+      "id": "n0271",
+      "time": 157826,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.661
+    },
+    {
+      "id": "n0272",
+      "time": 158267,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0273",
+      "time": 158708,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.663,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0274",
+      "time": 159150,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0275",
+      "time": 160009,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0276",
+      "time": 160891,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.862
+    },
+    {
+      "id": "n0277",
+      "time": 161332,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.667,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0278",
+      "time": 161773,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0279",
+      "time": 162633,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0280",
+      "time": 163051,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.697
+    },
+    {
+      "id": "n0281",
+      "time": 163492,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0282",
+      "time": 164351,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0283",
+      "time": 164792,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.7
+    },
+    {
+      "id": "n0284",
+      "time": 165233,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0285",
+      "time": 166116,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0286",
+      "time": 166975,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0287",
+      "time": 167834,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.835
+    },
+    {
+      "id": "n0288",
+      "time": 168716,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0289",
+      "time": 169575,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.846,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0290",
+      "time": 169993,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.694
+    },
+    {
+      "id": "n0291",
+      "time": 170458,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0292",
+      "time": 171317,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.897
+    },
+    {
+      "id": "n0293",
+      "time": 171758,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.761,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0294",
+      "time": 172199,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0295",
+      "time": 172617,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.72
+    },
+    {
+      "id": "n0296",
+      "time": 173058,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.843
+    },
+    {
+      "id": "n0297",
+      "time": 173917,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0298",
+      "time": 174800,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.86
+    },
+    {
+      "id": "n0299",
+      "time": 175241,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.724
+    },
+    {
+      "id": "n0300",
+      "time": 175682,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0301",
+      "time": 176541,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0302",
+      "time": 176541,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 0.82,
+      "accent": "double"
+    },
+    {
+      "id": "n0303",
+      "time": 177424,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0304",
+      "time": 178283,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0305",
+      "time": 178701,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.778
+    },
+    {
+      "id": "n0306",
+      "time": 179165,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0307",
+      "time": 179165,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0308",
+      "time": 180024,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.85
+    },
+    {
+      "id": "n0309",
+      "time": 180883,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0310",
+      "time": 181766,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0311",
+      "time": 182648,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0312",
+      "time": 183507,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0313",
+      "time": 184366,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0314",
+      "time": 184808,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.684
+    },
+    {
+      "id": "n0315",
+      "time": 185226,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0316",
+      "time": 185667,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.649
+    },
+    {
+      "id": "n0317",
+      "time": 186108,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0318",
+      "time": 186967,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0319",
+      "time": 187385,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.664,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0320",
+      "time": 187849,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0321",
+      "time": 188291,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.65
+    },
+    {
+      "id": "n0322",
+      "time": 188709,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0323",
+      "time": 189591,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0324",
+      "time": 190450,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.844
+    },
+    {
+      "id": "n0325",
+      "time": 191332,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0326",
+      "time": 191332,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0327",
+      "time": 192192,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.827
+    },
+    {
+      "id": "n0328",
+      "time": 192633,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.645,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0329",
+      "time": 193074,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0330",
+      "time": 193933,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.836
+    },
+    {
+      "id": "n0331",
+      "time": 194792,
+      "lane": 0,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0332",
+      "time": 194792,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0333",
+      "time": 195675,
+      "lane": 0,
+      "source": "onset",
+      "strength": 0.93
+    },
+    {
+      "id": "n0334",
+      "time": 196557,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0335",
+      "time": 197416,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0336",
+      "time": 197834,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.656
+    },
+    {
+      "id": "n0337",
+      "time": 198275,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0338",
+      "time": 199134,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0339",
+      "time": 200017,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0340",
+      "time": 200899,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0341",
+      "time": 201735,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0342",
+      "time": 201735,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.0,
+      "accent": "double"
+    },
+    {
+      "id": "n0343",
+      "time": 202617,
+      "lane": 2,
+      "source": "onset",
+      "strength": 0.975
+    },
+    {
+      "id": "n0344",
+      "time": 203059,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.924
+    },
+    {
+      "id": "n0345",
+      "time": 203500,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0346",
+      "time": 204359,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.008
+    },
+    {
+      "id": "n0347",
+      "time": 204359,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.008,
+      "accent": "double"
+    },
+    {
+      "id": "n0348",
+      "time": 204800,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.648
+    },
+    {
+      "id": "n0349",
+      "time": 205241,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0350",
+      "time": 205659,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.765
+    },
+    {
+      "id": "n0351",
+      "time": 206100,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0352",
+      "time": 206541,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.711
+    },
+    {
+      "id": "n0353",
+      "time": 206983,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0354",
+      "time": 207401,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.732
+    },
+    {
+      "id": "n0355",
+      "time": 207842,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0356",
+      "time": 208260,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.836
+    },
+    {
+      "id": "n0357",
+      "time": 208701,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.084
+    },
+    {
+      "id": "n0358",
+      "time": 209142,
+      "lane": 1,
+      "source": "onset",
+      "strength": 0.945
+    },
+    {
+      "id": "n0359",
+      "time": 209560,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0360",
+      "time": 210001,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.718
+    },
+    {
+      "id": "n0361",
+      "time": 210442,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0362",
+      "time": 210442,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.1,
+      "accent": "double"
+    },
+    {
+      "id": "n0363",
+      "time": 210860,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.76
+    },
+    {
+      "id": "n0364",
+      "time": 211302,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0365",
+      "time": 211743,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.707
+    },
+    {
+      "id": "n0366",
+      "time": 212184,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.093
+    },
+    {
+      "id": "n0367",
+      "time": 212184,
+      "lane": 3,
+      "source": "accent_chord",
+      "strength": 1.093,
+      "accent": "double"
+    },
+    {
+      "id": "n0368",
+      "time": 212625,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.795
+    },
+    {
+      "id": "n0369",
+      "time": 213066,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0370",
+      "time": 213484,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.763
+    },
+    {
+      "id": "n0371",
+      "time": 213925,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.04
+    },
+    {
+      "id": "n0372",
+      "time": 214343,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.811
+    },
+    {
+      "id": "n0373",
+      "time": 214785,
+      "lane": 1,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0374",
+      "time": 215226,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.774
+    },
+    {
+      "id": "n0375",
+      "time": 215667,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.1
+    },
+    {
+      "id": "n0376",
+      "time": 216038,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.957
+    },
+    {
+      "id": "n0377",
+      "time": 216526,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0378",
+      "time": 216967,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.692
+    },
+    {
+      "id": "n0379",
+      "time": 217432,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0380",
+      "time": 218291,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0381",
+      "time": 218709,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.645,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0382",
+      "time": 219150,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0383",
+      "time": 219591,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.717
+    },
+    {
+      "id": "n0384",
+      "time": 220009,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.024
+    },
+    {
+      "id": "n0385",
+      "time": 220450,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.669,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0386",
+      "time": 220891,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0387",
+      "time": 221333,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.713
+    },
+    {
+      "id": "n0388",
+      "time": 221751,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0389",
+      "time": 222192,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.666,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0390",
+      "time": 222633,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0391",
+      "time": 223074,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.669
+    },
+    {
+      "id": "n0392",
+      "time": 223492,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.026
+    },
+    {
+      "id": "n0393",
+      "time": 223933,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.704,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0394",
+      "time": 224374,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0395",
+      "time": 224792,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.673
+    },
+    {
+      "id": "n0396",
+      "time": 225234,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.954
+    },
+    {
+      "id": "n0397",
+      "time": 226116,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0398",
+      "time": 226557,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.64
+    },
+    {
+      "id": "n0399",
+      "time": 226975,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.881
+    },
+    {
+      "id": "n0400",
+      "time": 227416,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.712
+    },
+    {
+      "id": "n0401",
+      "time": 227857,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0402",
+      "time": 228717,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.881
+    },
+    {
+      "id": "n0403",
+      "time": 229135,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.656
+    },
+    {
+      "id": "n0404",
+      "time": 229576,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0405",
+      "time": 230458,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0406",
+      "time": 231340,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0407",
+      "time": 232200,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.834
+    },
+    {
+      "id": "n0408",
+      "time": 233059,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0409",
+      "time": 233941,
+      "lane": 1,
+      "source": "onset",
+      "strength": 0.921
+    },
+    {
+      "id": "n0410",
+      "time": 234800,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0411",
+      "time": 235636,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.931
+    },
+    {
+      "id": "n0412",
+      "time": 236100,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.693
+    },
+    {
+      "id": "n0413",
+      "time": 236542,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0414",
+      "time": 236960,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.674
+    },
+    {
+      "id": "n0415",
+      "time": 237401,
+      "lane": 3,
+      "source": "onset",
+      "strength": 0.982
+    },
+    {
+      "id": "n0416",
+      "time": 237819,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.767
+    },
+    {
+      "id": "n0417",
+      "time": 238283,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0418",
+      "time": 238724,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.693
+    },
+    {
+      "id": "n0419",
+      "time": 239142,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.849
+    },
+    {
+      "id": "n0420",
+      "time": 239583,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.645
+    },
+    {
+      "id": "n0421",
+      "time": 240001,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0422",
+      "time": 240884,
+      "lane": 0,
+      "source": "onset",
+      "strength": 1.034
+    },
+    {
+      "id": "n0423",
+      "time": 241325,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.678
+    },
+    {
+      "id": "n0424",
+      "time": 241766,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0425",
+      "time": 242625,
+      "lane": 3,
+      "source": "onset",
+      "strength": 1.033
+    },
+    {
+      "id": "n0426",
+      "time": 243043,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.757
+    },
+    {
+      "id": "n0427",
+      "time": 243508,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0428",
+      "time": 243949,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.733
+    },
+    {
+      "id": "n0429",
+      "time": 244367,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.875,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0430",
+      "time": 244808,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.673
+    },
+    {
+      "id": "n0431",
+      "time": 245249,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0432",
+      "time": 246108,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0433",
+      "time": 246991,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0434",
+      "time": 247850,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.845
+    },
+    {
+      "id": "n0435",
+      "time": 248732,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0436",
+      "time": 249591,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.864
+    },
+    {
+      "id": "n0437",
+      "time": 250009,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.691,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0438",
+      "time": 250450,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0439",
+      "time": 250892,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.642
+    },
+    {
+      "id": "n0440",
+      "time": 251310,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.882
+    },
+    {
+      "id": "n0441",
+      "time": 251751,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.747,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0442",
+      "time": 252192,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0443",
+      "time": 252633,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.643
+    },
+    {
+      "id": "n0444",
+      "time": 253051,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0445",
+      "time": 253492,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.685,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0446",
+      "time": 253933,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0447",
+      "time": 254793,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0448",
+      "time": 255234,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.777
+    },
+    {
+      "id": "n0449",
+      "time": 255675,
+      "lane": 1,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0450",
+      "time": 256116,
+      "lane": 0,
+      "source": "beat",
+      "strength": 0.709
+    },
+    {
+      "id": "n0451",
+      "time": 256557,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0452",
+      "time": 257463,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0453",
+      "time": 258415,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0454",
+      "time": 258879,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.657
+    },
+    {
+      "id": "n0455",
+      "time": 259344,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0456",
+      "time": 260226,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0457",
+      "time": 261108,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0458",
+      "time": 261968,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0459",
+      "time": 262827,
+      "lane": 2,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0460",
+      "time": 263709,
+      "lane": 3,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0461",
+      "time": 264591,
+      "lane": 0,
+      "source": "beat",
+      "strength": 1.0,
+      "accent": "downbeat"
+    },
+    {
+      "id": "n0462",
+      "time": 265474,
+      "lane": 1,
+      "source": "beat",
+      "strength": 0.82
+    },
+    {
+      "id": "n0463",
+      "time": 266356,
+      "lane": 3,
+      "source": "beat",
+      "strength": 1.0
+    },
+    {
+      "id": "n0464",
+      "time": 267238,
+      "lane": 2,
+      "source": "beat",
+      "strength": 0.82
+    }
+  ]
+}
